@@ -1,0 +1,86 @@
+
+networks:
+  adi-network:
+    driver: bridge
+
+services:
+  # Translator
+  azure-ai-translator:
+    container_name: azure-ai-translator
+    image: mcr.microsoft.com/azure-cognitive-services/translator/text-translation
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 42G
+    environment:
+      EULA: accept
+      APIKEY: ${TRANSLATOR_KEY}
+      BILLING: ${TRANSLATOR_ENDPOINT_URI}
+      LANGUAGES: zh-Hant,zh-Hans,en,ja,id,es,fr,ru,vi,it,pt,de,ko,tr,da,he,fa,ms,th,fil,ar
+      MODEL_PATH: /usr/local/models
+      ladurl: http://azure-ai-language:5000
+      VISIONURL: http://azure-ai-read:5000
+      # Mounts:Output: /logs
+      # Mounts:License: /license
+      Logging__LogLevel__Default: Error
+      # MODELS
+      # CATEGORIES
+      # MODSENVIRONMENT
+      # TRANSLATORSYSTEMCONFIG
+      # DOWNLOADLICENSE
+      # HOTFIXDATAFOLDER
+      # GENERATEHOTFIXTEMPLATE
+    # user: "0:0"  # Add this line to run as root (UID 0, GID 0)
+    volumes:
+      - ./azure-ai-translator/models:/usr/local/models
+    ports:
+      - "5000:5000"
+    networks:
+      - adi-network
+
+  # Language
+  azure-ai-language:
+    container_name: azure-ai-language
+    image: mcr.microsoft.com/azure-cognitive-services/textanalytics/language
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 24G
+    environment:
+      eula: accept
+      apikey: ${LANGUAGE_RESOURCE_KEY}
+      billing: ${LANGUAGE_RESOURCE_ENDPOINT_URI}
+    user: "65532:65532"
+    volumes:
+      - ./azure-ai-language/output:/output
+      # - ./azure-ai-language/input:/input
+    expose:
+      - "5000"
+    networks:
+      - adi-network
+
+  # #Read
+  azure-ai-read:
+    container_name: azure-ai-read
+    image: mcr.microsoft.com/azure-cognitive-services/vision/read
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 24G
+    environment:
+      eula: accept
+      apikey: ${COMPUTER_VISION_KEY}
+      billing: ${COMPUTER_VISION_ENDPOINT_URI}
+      Mounts:Shared: /share
+    user: "65532:65532"
+    expose:
+      - "5000"
+    networks:
+      - adi-network
+
