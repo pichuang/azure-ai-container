@@ -3,7 +3,7 @@ networks:
     driver: bridge
 
 services:
-  # Translator
+  # Azure AI Translator
   azure-ai-translator:
     container_name: azure-ai-translator
     image: mcr.microsoft.com/azure-cognitive-services/translator/text-translation:latest
@@ -41,7 +41,7 @@ services:
     networks:
       - adi-network
 
-  # Language
+  # Azure AI Language
   azure-ai-language:
     container_name: azure-ai-language
     image: mcr.microsoft.com/azure-cognitive-services/textanalytics/language:latest
@@ -68,7 +68,7 @@ services:
     networks:
       - adi-network
 
-  #Read
+  # Azure AI Vision Read
   azure-ai-read:
     container_name: azure-ai-read
     image: mcr.microsoft.com/azure-cognitive-services/vision/read:latest
