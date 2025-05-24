@@ -22,6 +22,6 @@ sudo chmod -R o+w ./azure-ai-language
 #
 # azure-ai-read
 #
-mkdir -p ./azure-ai-read
+mkdir -p ./azure-ai-read/share
 sudo chown -R 65532:65532 ./azure-ai-read
 sudo chmod -R o+w ./azure-ai-read

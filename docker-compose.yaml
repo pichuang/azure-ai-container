@@ -1,4 +1,3 @@
-
 networks:
   adi-network:
     driver: bridge
@@ -16,21 +15,21 @@ services:
           memory: 42G
     environment:
       # Azure AI Translator settings
-      EULA: accept
-      APIKEY: ${TRANSLATOR_KEY}
-      BILLING: ${TRANSLATOR_ENDPOINT_URI}
-      LANGUAGES: zh-Hant,zh-Hans,en,ja,id,es,fr,ru,vi,it,pt,de,ko,tr,da,he,fa,ms,th,fil,ar
-      MODEL_PATH: /usr/local/models # 語系包路徑, 預設為 /usr/local/models
-      HOTFIXDATAFOLDER: ""  # 若需使用 Hotfix 功能，則填入路徑, 預設留空
-      GENERATEHOTFIXTEMPLATE: "false"  # 若你需要使用 Hotfix 功能，請設定 GENERATEHOTFIXTEMPLATE 為 true，並指定 HOTFIXDATAFOLDER, 預設為 false
-      DOWNLOADLICENSE: "false"  # 若你只想下載授權檔案而不啟動服務，請設定 DOWNLOADLICENSE 為 true, 預設為 false
-      Mounts:License: "" # 若需使用 License 功能，則填入路徑, 預設留空
-      CATEGORIES: ""  # 若需指定模型分類，則填入分類名稱, 預設留空
-      MODSENVIRONMENT: ""  # 若使用 MoDS 服務，則填入 MoDS 端點, 預設留空
-      MODELS: ""
-      TRANSLATORSYSTEMCONFIG: ""
+      EULA: accept # (REQUIRE)
+      APIKEY: ${TRANSLATOR_KEY} # (REQUIRE)
+      BILLING: ${TRANSLATOR_ENDPOINT_URI} # (REQUIRE)
+      LANGUAGES: zh-Hant,zh-Hans,en,ja,id,es,fr,ru,vi,it,pt,de,ko,tr,da,he,fa,ms,th,fil,ar # (REQUIRE)
+      MODEL_PATH: /usr/local/models # (REQUIRE) Path to language models, default is /usr/local/models
+      HOTFIXDATAFOLDER: ""  # (Optional) Specify path if using Hotfix feature, leave empty by default
+      GENERATEHOTFIXTEMPLATE: "false"  # (Optional) Set to true if you need to generate Hotfix template and specify HOTFIXDATAFOLDER, default is false
+      DOWNLOADLICENSE: "false"  # (Optional) Set to true if you only want to download license file without starting the service, default is false
+      Mounts:License: "" # (Optional) Specify path if using License feature, leave empty by default
+      CATEGORIES: ""  # (Optional) Specify model categories if needed, leave empty by default
+      MODSENVIRONMENT: ""  # (Optional) Specify MoDS endpoint if using MoDS service, leave empty by default
+      MODELS: "" # (Optional) Leave empty by default
+      TRANSLATORSYSTEMCONFIG: "" # (Optional) Leave empty by default
       # .Net Core settings
-      Mounts:Output: /logs # It's not working
+      Mounts:Output: /logs # (Optional) But there is no log in the container
       # Other settings
       ladurl: http://azure-ai-language:5000
       VISIONURL: http://azure-ai-read:5000
@@ -60,6 +59,12 @@ services:
       - ./azure-ai-language/output:/output
     expose:
       - "5000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/status"]
+      interval: 60s
+      timeout: 20s
+      retries: 5
+      start_period: 120s
     networks:
       - adi-network
 
@@ -77,6 +82,8 @@ services:
       EULA: accept
       APIKEY: ${COMPUTER_VISION_KEY}
       BILLING: ${COMPUTER_VISION_ENDPOINT_URI}
+    volumes:
+      - ./azure-ai-read/share:/share
     expose:
       - "5000"
     networks:
