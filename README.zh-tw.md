@@ -3,12 +3,18 @@
 ## How to Use?
 
 ```bash
+git clone https://github.com/pichuang/azure-ai-container
+cd azure-ai-container
 cp .env.example .env
 cat .env
 ./1-prepare.sh
 ./2-run-prod.sh
 ./3-curl-test.sh
 ```
+
+## How does it works?
+
+請查閱 [docker-compose.yaml](docker-compose.yaml)
 
 ## Q&A
 
