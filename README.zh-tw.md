@@ -1,5 +1,15 @@
 # Azure AI Container
 
+## How to Use?
+
+```bash
+cp .env.example .env
+cat .env
+./1-prepare.sh
+./2-run-prod.sh
+./3-curl-test.sh
+```
+
 ## Q&A
 
 ### 要如何保留 AI Translation 的語系檔?
