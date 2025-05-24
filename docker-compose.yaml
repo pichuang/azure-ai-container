@@ -7,7 +7,7 @@ services:
   # Translator
   azure-ai-translator:
     container_name: azure-ai-translator
-    image: mcr.microsoft.com/azure-cognitive-services/translator/text-translation
+    image: mcr.microsoft.com/azure-cognitive-services/translator/text-translation:latest
     restart: always
     deploy:
       resources:
@@ -15,26 +15,28 @@ services:
           cpus: 8
           memory: 42G
     environment:
+      # Azure AI Translator settings
       EULA: accept
       APIKEY: ${TRANSLATOR_KEY}
       BILLING: ${TRANSLATOR_ENDPOINT_URI}
       LANGUAGES: zh-Hant,zh-Hans,en,ja,id,es,fr,ru,vi,it,pt,de,ko,tr,da,he,fa,ms,th,fil,ar
-      MODEL_PATH: /usr/local/models
+      MODEL_PATH: /usr/local/models # 語系包路徑, 預設為 /usr/local/models
+      HOTFIXDATAFOLDER: ""  # 若需使用 Hotfix 功能，則填入路徑, 預設留空
+      GENERATEHOTFIXTEMPLATE: "false"  # 若你需要使用 Hotfix 功能，請設定 GENERATEHOTFIXTEMPLATE 為 true，並指定 HOTFIXDATAFOLDER, 預設為 false
+      DOWNLOADLICENSE: "false"  # 若你只想下載授權檔案而不啟動服務，請設定 DOWNLOADLICENSE 為 true, 預設為 false
+      Mounts:License: "" # 若需使用 License 功能，則填入路徑, 預設留空
+      CATEGORIES: ""  # 若需指定模型分類，則填入分類名稱, 預設留空
+      MODSENVIRONMENT: ""  # 若使用 MoDS 服務，則填入 MoDS 端點, 預設留空
+      MODELS: ""
+      TRANSLATORSYSTEMCONFIG: ""
+      # .Net Core settings
+      Mounts:Output: /logs # It's not working
+      # Other settings
       ladurl: http://azure-ai-language:5000
       VISIONURL: http://azure-ai-read:5000
-      # Mounts:Output: /logs
-      # Mounts:License: /license
-      Logging__LogLevel__Default: Error
-      # MODELS
-      # CATEGORIES
-      # MODSENVIRONMENT
-      # TRANSLATORSYSTEMCONFIG
-      # DOWNLOADLICENSE
-      # HOTFIXDATAFOLDER
-      # GENERATEHOTFIXTEMPLATE
-    # user: "0:0"  # Add this line to run as root (UID 0, GID 0)
     volumes:
       - ./azure-ai-translator/models:/usr/local/models
+      - ./azure-ai-translator/logs:/logs
     ports:
       - "5000:5000"
     networks:
@@ -43,7 +45,7 @@ services:
   # Language
   azure-ai-language:
     container_name: azure-ai-language
-    image: mcr.microsoft.com/azure-cognitive-services/textanalytics/language
+    image: mcr.microsoft.com/azure-cognitive-services/textanalytics/language:latest
     restart: always
     deploy:
       resources:
@@ -51,22 +53,20 @@ services:
           cpus: 8
           memory: 24G
     environment:
-      eula: accept
-      apikey: ${LANGUAGE_RESOURCE_KEY}
-      billing: ${LANGUAGE_RESOURCE_ENDPOINT_URI}
-    user: "65532:65532"
+      EULA: accept
+      APIKEY: ${LANGUAGE_RESOURCE_KEY}
+      BILLING: ${LANGUAGE_RESOURCE_ENDPOINT_URI}
     volumes:
       - ./azure-ai-language/output:/output
-      # - ./azure-ai-language/input:/input
     expose:
       - "5000"
     networks:
       - adi-network
 
-  # #Read
+  #Read
   azure-ai-read:
     container_name: azure-ai-read
-    image: mcr.microsoft.com/azure-cognitive-services/vision/read
+    image: mcr.microsoft.com/azure-cognitive-services/vision/read:latest
     restart: always
     deploy:
       resources:
@@ -74,11 +74,9 @@ services:
           cpus: 8
           memory: 24G
     environment:
-      eula: accept
-      apikey: ${COMPUTER_VISION_KEY}
-      billing: ${COMPUTER_VISION_ENDPOINT_URI}
-      Mounts:Shared: /share
-    user: "65532:65532"
+      EULA: accept
+      APIKEY: ${COMPUTER_VISION_KEY}
+      BILLING: ${COMPUTER_VISION_ENDPOINT_URI}
     expose:
       - "5000"
     networks:

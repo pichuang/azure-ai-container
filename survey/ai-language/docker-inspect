@@ -1,0 +1,110 @@
+[
+    {
+        "Id": "sha256:792693ac57369cb928b2d8649d2cf417497031ac2efa97d807e1e146aa6bd484",
+        "RepoTags": [
+            "mcr.microsoft.com/azure-cognitive-services/textanalytics/language:latest"
+        ],
+        "RepoDigests": [
+            "mcr.microsoft.com/azure-cognitive-services/textanalytics/language@sha256:ef6e69cf20dda222cdff33320d79457688cb686a294b78830e55726d99103505"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2025-05-19T19:21:34.536149099Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "nonroot",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "5000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "APP_UID=1654",
+                "ASPNETCORE_HTTP_PORTS=8080",
+                "DOTNET_RUNNING_IN_CONTAINER=true",
+                "DOTNET_VERSION=8.0.16",
+                "ASPNET_VERSION=8.0.16",
+                "DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false",
+                "ASPNETCORE_URLS=http://0.0.0.0:5000",
+                "ASPNETCORE_ENVIRONMENT=Production",
+                "CloudAI__LanguageShortTextModelFile=2024-11-01/short_model/model.ftz",
+                "CloudAI__LanguageModelFile=2024-11-01/long_model/model.bin",
+                "LD_LIBRARY_PATH=:/app",
+                "ENCRYPTION_KEYS=encryptionKey-ld-2024-11-01-20250122-16",
+                "CloudAI__EnableCors=true",
+                "CloudAI__LatestStableModelVersion=2024-11-01",
+                "CloudAI__LongTextModelVersion=2024-11-01",
+                "CloudAI__ShortTextModelVersion=2024-11-01"
+            ],
+            "Cmd": null,
+            "ArgsEscaped": true,
+            "Image": "",
+            "Volumes": {
+                "/output": {}
+            },
+            "WorkingDir": "/app",
+            "Entrypoint": [
+                "dotnet",
+                "Microsoft.CloudAI.Containers.LanguageFastText.dll"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.visualstudio.msazure.image.build.buildnumber": "3.0.124679050-onprem-d13807a",
+                "com.visualstudio.msazure.image.build.builduri": "vstfs:///Build/Build/124679050",
+                "com.visualstudio.msazure.image.build.definitionname": "API-TextAnalytics-Official-Metered-LanguageDetection-Dispatcher",
+                "com.visualstudio.msazure.image.build.repository.name": "API-TextAnalytics",
+                "com.visualstudio.msazure.image.build.repository.uri": "https://msazure.visualstudio.com/Cognitive%20Services/_git/API-TextAnalytics",
+                "com.visualstudio.msazure.image.build.sourcebranchname": "master",
+                "com.visualstudio.msazure.image.build.sourceversion": "d13807aaf9345fb29929c1b6b8069817cbc55700",
+                "com.visualstudio.msazure.image.system.teamfoundationcollectionuri": "https://msazure.visualstudio.com/",
+                "com.visualstudio.msazure.image.system.teamproject": "Cognitive Services",
+                "image.base.digest": "sha256:0a1009287c25122df4f1ea0b8893205467fda92d578a957bad4772e3b314fda4",
+                "image.base.ref.name": "mcr.microsoft.com/dotnet/aspnet:8.0-azurelinux3.0"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 5339417081,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/f3674ece68510b6ac698bdbdbfd3d077dc84fd42cd7400378e2c0f17acc60f46/diff:/var/lib/docker/overlay2/4299dfcb4aa1460cdf630438a745d3d56e7fd761fe69c9f2bd786b4813d4fe9f/diff:/var/lib/docker/overlay2/826530ef92f071742f152ccf503755d373f865a7c47bb2fe1f9e5515ec474a9b/diff:/var/lib/docker/overlay2/0bc381bf9c0d3b2a53bffa12cdc3a3239ee8c945f8d19feda77df1c1b0930c4f/diff:/var/lib/docker/overlay2/23ec2f75fb51b50f31bfd9ecf574b8ff912ba7d8638ab37841debd89a909c772/diff:/var/lib/docker/overlay2/2ef0f1f5b5de58e3a2da924abcbe2b6a86ff2a026cc52b08102087fcf2b942a1/diff:/var/lib/docker/overlay2/a6751568abff792b991e7002cdd73adf027e18a5fc8384abeff87a4556236e47/diff:/var/lib/docker/overlay2/b40e35e71d2f7e3dd83c3b9540a52d86b5d3205aa5b7582d12fb7ab6dd041435/diff:/var/lib/docker/overlay2/67a4de65144111866203c3af326f74e3392c233436e0c6c759866434998327ae/diff:/var/lib/docker/overlay2/f41b8fa3571c4c52d7c6db111fc37f322912c4a76d8f764cda6d055a6716acc9/diff:/var/lib/docker/overlay2/faa344495ac62243b8cc21669104c98bc829cd9d8291a71a89235200d89b8144/diff:/var/lib/docker/overlay2/72bb8f619df7548a3516656e2c9c36db9b96cbc6ea5e50feb962a1581447817c/diff:/var/lib/docker/overlay2/d2702e021849a25bcc0c27a2d0d53fcd028456211c2eef3907e766a72c1ad23c/diff:/var/lib/docker/overlay2/7cd8f5a51f6bb43e7cc987c7b0b4734e0ae33cf3e653dc939c2d23a9f03112ec/diff:/var/lib/docker/overlay2/917698b9f822c6e3b73a560041f869d815ec3d4afe703746c83ea10f1d7871be/diff",
+                "MergedDir": "/var/lib/docker/overlay2/5fc04c16969863c8be79939fdee441ae2cd0725e1f4908df79e961aecf78efe4/merged",
+                "UpperDir": "/var/lib/docker/overlay2/5fc04c16969863c8be79939fdee441ae2cd0725e1f4908df79e961aecf78efe4/diff",
+                "WorkDir": "/var/lib/docker/overlay2/5fc04c16969863c8be79939fdee441ae2cd0725e1f4908df79e961aecf78efe4/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:8aa805df56c9164a1ce29bb04512221d0151b49731488f8f672b6531b351fc8d",
+                "sha256:09abf8614d10a231ee3922aabe5ad79af0c14ce0c4881a05bef4f4a3021b8207",
+                "sha256:68ff534e3a041d30fa1ef8b99516d8dc2e322849f08399b1af126c97438b33cf",
+                "sha256:152ad1194d46f25a6ebc658a0e6851ea15d235e6a4bb825e27584b2823759940",
+                "sha256:5db7bc0257868fcfebb8433c6aaf3655cc1b2da0f1e231a703f1767db0024c7c",
+                "sha256:cd6ca78e730fa81aaf05c977b486ff6f0bdfd83cafe5b66f8385342b55f55114",
+                "sha256:c0c3e18938d67786e85bc745b3d96f6c8f637f651c0ca6e213f79edc0153e465",
+                "sha256:49c32958c46c618b0516dab30911ef6ba6e19113041e9e524d3f95f62243edd4",
+                "sha256:148aaec5d6ff13ab06d1a07e419a0de404202ca8082848cfeb876862f16e4180",
+                "sha256:459e319bc9f3fb2f5ba2de12707c297285575c007959b5acc721c87d4a73abda",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:d4c4e9a6e29976d6ac8614569f3e3e87e6b450c5d56e538fca92ddac070aa067",
+                "sha256:27c4a8178f91600123879882fc05ffc9da397a63502de4228159c881ec16b1e1",
+                "sha256:442d3bc7342140cae3e30da82ab7a68b5c56c93ac321ade0e1e2d8432a719854",
+                "sha256:7f5c30741a4765ca5c1e75b0ce54a86b6f4abfd8a4e23aabc5f4205b703b4fd7"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

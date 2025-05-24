@@ -1,0 +1,124 @@
+[
+    {
+        "Id": "sha256:788716a1b210e15bffe8d8d896a70e86b0437053cb1fe6af46184a6f6ee7076f",
+        "RepoTags": [
+            "mcr.microsoft.com/azure-cognitive-services/vision/read:latest"
+        ],
+        "RepoDigests": [
+            "mcr.microsoft.com/azure-cognitive-services/vision/read@sha256:fe83b5c3233a5f2bc5e571851cc78f98806babe3eaead55d2c1283bfcafc09e8"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2025-05-19T03:58:53.90884452Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "nonroot",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt",
+                "LD_LIBRARY_PATH=/usr/local/lib:",
+                "BUILD_CONFIG=CvRead20220430",
+                "CognitiveServiceContainerVersion=20250519.2-cdc06c35",
+                "ASPNETCORE_URLS=http://+:5000",
+                "OcrWorker__ModelConfig=/usr/local/share/oneocr/models/config.onefeature.onemodel",
+                "OcrWorker__ThreadPoolSize=2",
+                "OcrWorker__UseModelDelayLoad=true",
+                "EnableSecondaryQueue=false",
+                "HealthCheck__MemoryUpperBoundInMB=16000",
+                "ONEOCR_ORT_GRAPH_OPT=2",
+                "OMP_NUM_THREADS=1",
+                "MALLOC_ARENA_MAX=4",
+                "ONEOCR_CONCURRENCY=4",
+                "ONEOCR_INSTALL_FAILURES_SIGNAL_HANDLER=0",
+                "Logging__LogLevel__Default=Error",
+                "Logging__LogLevel__Microsoft.CloudAI.Containers.Storage.ObjectStore.FileObjectStore=Critical",
+                "COMPlus_EnableDiagnostics=0",
+                "Mounts:Shared=/share"
+            ],
+            "Cmd": null,
+            "ArgsEscaped": true,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": [
+                "./Microsoft.CloudAI.Containers.VDI.OnPremises.Upstream"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "BaseImage": "oneocracr.azurecr.io/artifact/a2eae2da-667d-4b19-8789-9471e346ca84/official/ubuntu/distroless/crypto:6.0.733-gd84951be-2022.04-read-3.3-ga-202504270233utc",
+                "com.visualstudio.msazure.image.build.buildnumber": "20250519.2-cdc06c35#",
+                "com.visualstudio.msazure.image.build.builduri": "vstfs:///Build/Build/124602142",
+                "com.visualstudio.msazure.image.build.definitionname": "API-VDI-Service-OB-Official",
+                "com.visualstudio.msazure.image.build.repository.name": "API-VDI-Service",
+                "com.visualstudio.msazure.image.build.repository.uri": "https://msazure.visualstudio.com/Cognitive%20Services/_git/API-VDI-Service",
+                "com.visualstudio.msazure.image.build.sourcebranchname": "prod",
+                "com.visualstudio.msazure.image.build.sourceversion": "cdc06c35c83388c2da28779447d184555252a540",
+                "com.visualstudio.msazure.image.system.teamfoundationcollectionuri": "https://msazure.visualstudio.com/",
+                "com.visualstudio.msazure.image.system.teamproject": "Cognitive Services"
+            },
+            "Shell": [
+                "/bin/bash",
+                "-c"
+            ]
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 2047378255,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/b72333a76823ef0e3f86c3f24d469e18f368db7b4452564541788c602d7e46a6/diff:/var/lib/docker/overlay2/c983b67e7102373cd1ba8f2803011356198cf1d770e18b1b3a26d7db00cece4c/diff:/var/lib/docker/overlay2/62b44b830f3777138e07df0c0300c5767d84a09bf8a8ae382951e440d82af06d/diff:/var/lib/docker/overlay2/d360e785feb665c8cffb1af624cbe29547428017a6ec822f269ce5ce83fe197f/diff:/var/lib/docker/overlay2/f182ace06c7bf7cc1d4e368c2e6e16222b413905de7f75ee5b3e9955b78c065d/diff:/var/lib/docker/overlay2/cb514d649001e29fedfe3b0d84e6d890452a3e3f535eb7fc16b7448441e312ce/diff:/var/lib/docker/overlay2/d2c509ceed986051b56037dac4a64a525b7479ddde2d40bc4c3ae6df8f44aca5/diff:/var/lib/docker/overlay2/3a27b82b75846a617c258694572653a64ffc5b8f19007c64c5e71aa0b24fa1a2/diff:/var/lib/docker/overlay2/8df3d7aec81631458f1b5002014df9629983c4b0d6bffa74d263e85958daf3a3/diff:/var/lib/docker/overlay2/fd99b54369c79e05ef1777ddba9cbd24b652297c656af9e8b9b5602768b54188/diff:/var/lib/docker/overlay2/7a1e112147593f7c7bcdb5eff6c820ef1a9dab36937c853854108b70b8c6f948/diff:/var/lib/docker/overlay2/0e86aceebf6451443d930fa15697040d0070744bcca1a828fb0344bfc83b4cfe/diff:/var/lib/docker/overlay2/01f8d226e3d801d3b778ea41c843044efeea5476649147b13f329656543b690f/diff:/var/lib/docker/overlay2/733e329fef06b24b7a4fe8fb2010888823c1135d4314ffa8e53d70228690c3f3/diff:/var/lib/docker/overlay2/20148ff7494729478b30c544c1cc055553d8ff8812f77e09321c85f3e7666ec1/diff:/var/lib/docker/overlay2/2e3a962e5261f0ac122f8317f6812c0d43036a62b4c986d92714a30285a861e7/diff:/var/lib/docker/overlay2/410ecc370e49ec9f06a20f6c17fe60442dd74dfa837e57e6560e12172c6792ec/diff:/var/lib/docker/overlay2/25618f14d0eb9bbed35562b10dcb0e647c68e1735bb76e655e701c3a7e3cee11/diff:/var/lib/docker/overlay2/296db24975aa42fe74ba1a726ecd866da89a4c6401605caa670df643e3909977/diff:/var/lib/docker/overlay2/a58153479d742f8ac9c6e5d1e951060433e7982df89395031b562e233c0cb996/diff:/var/lib/docker/overlay2/e1e0941bfc8d0cd52d273e2f80acfb99f275a35cc5b038917b1cbdd778718e07/diff:/var/lib/docker/overlay2/2b55f85df5b58d9fdcb9d4d08ace1b25516cef4b58c93b9b12b41a6da156fd7f/diff:/var/lib/docker/overlay2/42a9250fe7150e61deaf0338fe95a959c967ca59245db67131fa2e1e7780ed19/diff:/var/lib/docker/overlay2/d48f0ca4462407c8ce5aa3a586a28b23841730bd667edbdb98cbf9ad66d79f57/diff:/var/lib/docker/overlay2/35e7148e1c194f8d262fc2f5135bc6ff52a238fb52432cc1a07800357143ceaf/diff:/var/lib/docker/overlay2/39eeb118c1b7b73de5bf68fe46c315ea1f0ce0e91bea4c7d32a6edced239045b/diff:/var/lib/docker/overlay2/d34d8c01268eeb57b1095cee8c7886f1e47968c23d9d9b9b77fe8d9d9fdba46d/diff:/var/lib/docker/overlay2/c81ffaf619ecac96ea6d55684dacff593c678550960104681145e19598034005/diff:/var/lib/docker/overlay2/20cae2b82193fda3577bd33e334dfdc88254226d13157197acb9962b68bf8b07/diff",
+                "MergedDir": "/var/lib/docker/overlay2/8a5068e9e3734fc7a9c9e55f1f8c4a858484f7cf798447beb153755fc6150a02/merged",
+                "UpperDir": "/var/lib/docker/overlay2/8a5068e9e3734fc7a9c9e55f1f8c4a858484f7cf798447beb153755fc6150a02/diff",
+                "WorkDir": "/var/lib/docker/overlay2/8a5068e9e3734fc7a9c9e55f1f8c4a858484f7cf798447beb153755fc6150a02/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:5342a2647e8784b3afdeb9b148d5fe1e7e1089ed3650204077765c78b3b0f93c",
+                "sha256:577c8ee06f39e2bc276615f1058fa40081255ce5e2f072df4875e27868de5660",
+                "sha256:9ed498e122b248a801130d052c25418381ee7bf215cdf7990965bae0dc37dcc2",
+                "sha256:4d049f83d9cf21d1f5cc0e11deaf36df02790d0e60c1a3829538fb4b61685368",
+                "sha256:af5aa97ebe6ce1604747ec1e21af7136ded391bcabe4acef882e718a87c86bcc",
+                "sha256:ac805962e47900b616b2f4b4584a34ac7b07d64ac1fd2c077478cf65311addcc",
+                "sha256:bbb6cacb8c82e4da4e8143e03351e939eab5e21ce0ef333c42e637af86c5217b",
+                "sha256:2a92d6ac9e4fcc274d5168b217ca4458a9fec6f094ead68d99c77073f08caac1",
+                "sha256:1a73b54f556b477f0a8b939d13c504a3b4f4db71f7a09c63afbc10acb3de5849",
+                "sha256:c048279a7d9f8e94b4c022b699ad8e8a0cb08b717b014ce4af15afaf375a6ac2",
+                "sha256:2388d21e8e2b74e055216652e6af384768e97513ad568e10c27bacec389b7f0a",
+                "sha256:2ed76202ff46ba3edc08ae46bcb4cf91477f4dab78408ded153f5a90acff16d6",
+                "sha256:695c2264bdbda1415aeffaabf10a9bca26421bfeb7ebca8b315ef3982e26f78b",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:cb9bfd065f663c9c5655612af874b964f6b4e4e04c886309528886de0120c0d3",
+                "sha256:52e460cf9f950b06f404e83a76a75f021c557c8aa90f093566bd0fc2b6532e22",
+                "sha256:c14d9fa66cef266e13b0a24ea8923b90b516304fce2c2fe4369c9dea7e65e7c1",
+                "sha256:3fe2ad67dec02e9450cf1f1954dd5197a1bcfda76df43e386e4cc8e971549561",
+                "sha256:eae08f3aa824c1af8bce33b6fd86e13066f771bcce8f69f980e2c2be60342778",
+                "sha256:256efaf0db815fa17d72a5f30662829d57d9a7761bdb6aae4183c7bd034f6977",
+                "sha256:74690dca00f4803b6209ad59be6155b0e95b02adf38eb502bee5d411724cb1cd",
+                "sha256:eb8fd1bf2784ba6eec0c8aadac6043fbecbd9be7eec86183dda92450d0bc3706",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:e8e2f009b1c669041968952b72f75f103117c78f4dc6f597436851c71c969d7a",
+                "sha256:f3de902bd402bf8f1c5a9b83ebbd6fb7c6544db44f8a88cb564a6e6612d9ca1d",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:4041ffaa46f498404e128c84d02a77d63b68ad836b023f4d278b9a285c347b15",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:de0bba6b1c7b594bee4737e669cb51bbd4b82c8b210d2e4b8c329baaaaeeebd7"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

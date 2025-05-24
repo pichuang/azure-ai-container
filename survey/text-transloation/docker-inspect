@@ -1,0 +1,90 @@
+[
+    {
+        "Id": "sha256:d1b3aa6ba4ba7fc88d49293b74aa61b05eb11c70348bf7b94702cb44405ce865",
+        "RepoTags": [
+            "mcr.microsoft.com/azure-cognitive-services/translator/text-translation:latest"
+        ],
+        "RepoDigests": [
+            "mcr.microsoft.com/azure-cognitive-services/translator/text-translation@sha256:b00f7f1e891005fd5554dae36db5a4e525840145b3f6aab7a28124348fb8700f"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2025-05-08T17:06:13.821980667Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "nonroot",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "5000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/opt/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "ENVIRONMENT=onprem",
+                "SERVICE=texttranslation",
+                "MODEL_PATH=/usr/local/models",
+                "MODEL_DEBUG_PATH=/usr/local/debug",
+                "LD_LIBRARY_PATH=/app",
+                "ASPNETCORE_URLS=http://*:5000"
+            ],
+            "Cmd": [
+                "-c",
+                "./start_service.sh"
+            ],
+            "ArgsEscaped": true,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": [
+                "/usr/sbin/busybox",
+                "sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.visualstudio.machinetranslation.image.build.buildnumber": "1.0.03049.787",
+                "com.visualstudio.machinetranslation.image.build.builduri": "vstfs:///Build/Build/316441",
+                "com.visualstudio.machinetranslation.image.build.definitionname": "OneBranch-mt-api-frontend-OnPrem-Official",
+                "com.visualstudio.machinetranslation.image.build.repository.name": "mt-api-frontend",
+                "com.visualstudio.machinetranslation.image.build.repository.uri": "https://machinetranslation.visualstudio.com/MachineTranslation/_git/mt-api-frontend",
+                "com.visualstudio.machinetranslation.image.build.sourcebranchname": "master",
+                "com.visualstudio.machinetranslation.image.build.sourceversion": "5fd62596eaa10a9cb2719864c8751cebcbed9789",
+                "com.visualstudio.machinetranslation.image.system.teamfoundationcollectionuri": "https://machinetranslation.visualstudio.com/",
+                "com.visualstudio.machinetranslation.image.system.teamproject": "MachineTranslation",
+                "image.base.digest": "sha256:bf86bdf8eadf0bfcbfab3011a260d694428af66ed8c22e2e54aa32a99b93a8e3",
+                "image.base.ref.name": "mcr.microsoft.com/cbl-mariner/distroless/base:2.0"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1255255558,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/e7c8b336242712bef6f234df964b52a4c2c28093c11127a136922bc626c89e8d/diff:/var/lib/docker/overlay2/d26fac0c877b0c5817c79657feced6004f36f8f1d608febfda9ee1dd858a2b2d/diff:/var/lib/docker/overlay2/ef10e71f0a30727bf4406eb38cfc79dc6246e758b652b2dae910c91a6789182d/diff:/var/lib/docker/overlay2/a4204bdde5c262f40e0205d9959f152be884affe80ad8723403b7e5b800de413/diff",
+                "MergedDir": "/var/lib/docker/overlay2/fa6ac65f24ef3676dcf01303ca50c2c4d682be81a612f0b39f1b58f1c3874115/merged",
+                "UpperDir": "/var/lib/docker/overlay2/fa6ac65f24ef3676dcf01303ca50c2c4d682be81a612f0b39f1b58f1c3874115/diff",
+                "WorkDir": "/var/lib/docker/overlay2/fa6ac65f24ef3676dcf01303ca50c2c4d682be81a612f0b39f1b58f1c3874115/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:8c37fffce553859ae543ef7c07d9c37b4fb63a30efc8ff0208ed4d4b43f23653",
+                "sha256:bee68b058c67f01896efa2a54adefec052f6ba1a0d9b0e492ecdd124b89879ec",
+                "sha256:17cc7aa7bf18504a4ab6979b1291e709c142ebf78c7bc19ceb28e8063112b2d8",
+                "sha256:576a28cce579c160a3bca4587bb039e5647a1209129e832d293a7f3cd8416b30",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
