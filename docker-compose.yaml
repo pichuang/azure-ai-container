@@ -36,6 +36,8 @@ services:
     volumes:
       - ./azure-ai-translator/models:/usr/local/models
       - ./azure-ai-translator/logs:/logs
+    expose:
+      - "5000"
     ports:
       - "5000:5000"
     networks:
@@ -58,6 +60,8 @@ services:
     volumes:
       - ./azure-ai-language/output:/output
     expose:
+      - "5000"
+    ports:
       - "5001:5000"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000/status"]
@@ -85,6 +89,8 @@ services:
     volumes:
       - ./azure-ai-read/share:/share
     expose:
+      - "5000"
+    ports:
       - "5002:5000"
     networks:
       - adi-network
