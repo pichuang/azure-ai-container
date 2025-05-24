@@ -6,7 +6,6 @@ services:
       resources:
         limits:
           cpus: 2
-    user: "65532:65532"
   azure-ai-language:
     env_file:
       - .env
@@ -14,9 +13,6 @@ services:
       resources:
         limits:
           cpus: 2
-    ports:
-      - "5001:5000"
-    user: "65532:65532"
   azure-ai-read:
     env_file:
       - .env
@@ -24,6 +20,3 @@ services:
       resources:
         limits:
           cpus: 2
-    ports:
-      - "5002:5000"
-    user: "65532:65532"
