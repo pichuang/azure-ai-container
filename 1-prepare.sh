@@ -10,6 +10,8 @@ mkdir -p ./azure-ai-translator/models
 mkdir -p ./azure-ai-translator/logs
 # mkdir -p ./azure-ai-translator/license
 sudo chown -R 65532:65532 ./azure-ai-translator
+sudo chmod -R +x ./azure-ai-translator/start_service.sh
+sudo chmod -R +x ./azure-ai-translator/translator_system_config
 sudo chmod -R o+w ./azure-ai-translator
 
 #

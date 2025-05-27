@@ -1,0 +1,686 @@
+[
+  {
+    "sourceLanguage": "zh-CHT",
+    "targetLanguage": "zh-CHS",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "zh-TW",
+      "targetLanguage": "zh-CN",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "zh-CHS",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "zh-CN",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "ja",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "ja-JP",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "id",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "id-ID",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "es",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "es-ES",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "fr",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "fr-FR",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "ru",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "ru-RU",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "vi",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "vi-VN",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "it",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "it-IT",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "pt",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "pt-BR",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "de",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "de-DE",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "ko",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "ko-KR",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "tr",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "tr-TR",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "da",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "da-DK",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "he",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "he-IL",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "fa",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "fa-IR",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "ms",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "ms-MY",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "th",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "th-TH",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "fil",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "fil-PH",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "ar",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "ar-SA",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "zh-CHS",
+    "targetLanguage": "zh-CHT",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "zh-CN",
+      "targetLanguage": "zh-TW",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "en",
+    "targetLanguage": "zh-CHS",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "zh-CN",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "ja",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "ja-JP",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "id",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "id-ID",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "es",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "es-ES",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "fr",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "fr-FR",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "ru",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "ru-RU",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "vi",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "vi-VN",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "it",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "it-IT",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "pt",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "pt-BR",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "de",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "de-DE",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "ko",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "ko-KR",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "tr",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "tr-TR",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "da",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "da-DK",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "he",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "he-IL",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "fa",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "fa-IR",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "ms",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "ms-MY",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "th",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "th-TH",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "fil",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "fil-PH",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "ar",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "ar-SA",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "zh-CHT-Latn",
+    "targetLanguage": "zh-CHT-Hant",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "zh-TW",
+      "leafDomain": "generalnn_contextual_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "zh-CHT-Hant",
+    "targetLanguage": "zh-CHT-Latn",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "zh-Hant",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "zh-CHS-Latn",
+    "targetLanguage": "zh-CHS-Hans",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "zh-CN",
+      "leafDomain": "generalnn_contextual_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "zh-CHS-Hans",
+    "targetLanguage": "zh-CHS-Latn",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "zh-Hans",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "ja-Latn",
+    "targetLanguage": "ja-Jpan",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "ja-JP",
+      "leafDomain": "generalnn_contextual_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "ja-Jpan",
+    "targetLanguage": "ja-Latn",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "ja-JP",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "ru-Cyrl",
+    "targetLanguage": "ru-Latn",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "ru-RU",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "ru-Latn",
+    "targetLanguage": "ru-Cyrl",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "ru-RU",
+      "leafDomain": "generalnn_contextual_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "ko-Kore",
+    "targetLanguage": "ko-Latn",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "ko-KR",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "ko-Latn",
+    "targetLanguage": "ko-Kore",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "ko-KR",
+      "leafDomain": "generalnn_contextual_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "he-Hebr",
+    "targetLanguage": "he-Latn",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "he-IL",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "he-Latn",
+    "targetLanguage": "he-Hebr",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "he-IL",
+      "leafDomain": "generalnn_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "fa-Arab",
+    "targetLanguage": "fa-Latn",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "fa-IR",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "fa-Latn",
+    "targetLanguage": "fa-Arab",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "fa-IR",
+      "leafDomain": "generalnn_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "th-Thai",
+    "targetLanguage": "th-Latn",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "th-TH",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "ar-Arab",
+    "targetLanguage": "ar-Latn",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "ar-SA",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn_translit",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "ar-Latn",
+    "targetLanguage": "ar-Arab",
+    "category": "generalnn_translit",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "en-US",
+      "targetLanguage": "ar-SA",
+      "leafDomain": "generalnn_contextual_translit",
+      "type": "InProcess"
+    }
+  }
+]

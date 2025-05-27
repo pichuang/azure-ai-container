@@ -4,7 +4,8 @@
 echo "----------------------------------------"
 echo "Check azure-ai-translator :5000"
 echo "----------------------------------------"
-curl -I http://localhost:5000
+curl -I http://localhost:5000/
+curl -I http://localhost:5000/status
 
 # Check azure-ai-language
 echo "----------------------------------------"

@@ -2,21 +2,24 @@ services:
   azure-ai-translator:
     env_file:
       - .env
-    deploy:
-      resources:
-        limits:
-          cpus: 2
-  azure-ai-language:
-    env_file:
-      - .env
-    deploy:
-      resources:
-        limits:
-          cpus: 2
-  azure-ai-read:
-    env_file:
-      - .env
-    deploy:
-      resources:
-        limits:
-          cpus: 2
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: 8
+    #       memory: 32G
+  # azure-ai-language:
+  #   env_file:
+  #     - .env
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         cpus: 8
+  #         memory: 4G
+  # azure-ai-read:
+  #   env_file:
+  #     - .env
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         cpus: 8
+  #         memory: 4G

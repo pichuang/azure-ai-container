@@ -8,17 +8,25 @@ services:
     container_name: azure-ai-translator
     image: mcr.microsoft.com/azure-cognitive-services/translator/text-translation:latest
     restart: always
-    deploy:
-      resources:
-        limits:
-          cpus: 8
-          memory: 42G
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: 8
+    #       memory: 24G
     environment:
       # Azure AI Translator settings
       EULA: accept # (REQUIRE)
       APIKEY: ${TRANSLATOR_KEY} # (REQUIRE)
       BILLING: ${TRANSLATOR_ENDPOINT_URI} # (REQUIRE)
-      LANGUAGES: zh-Hant,zh-Hans,en,ja,id,es,fr,ru,vi,it,pt,de,ko,tr,da,he,fa,ms,th,fil,ar # (REQUIRE)
+      # LANGUAGES: zh-Hant,zh-Hans,en,ja,id,es,fr,ru,vi,it #success
+      # LANGUAGES: zh-Hant,zh-Hans,en,ja,id,es,fr,ru,vi,it,pt #success
+      # LANGUAGES: zh-Hant,zh-Hans,en,ja,id,es,fr,ru,vi,it,pt,de #success
+      # LANGUAGES: zh-Hant,zh-Hans,en,ja,id,es,fr,ru,vi,it,pt,ko #success 17G
+      LANGUAGES: zh-Hant,zh-Hans,en # susccess 15G
+      # LANGUAGES: zh-Hant,zh-Hans,en,ja,id,es,fr,ru,vi,fa,ms,th # susccess 15G
+      # LANGUAGES: zh-Hant,zh-Hans,en,ja,id,es,fr,ru,vi,it,pt,de,ko #failed
+      # LANGUAGES: zh-Hant,zh-Hans,en,ja,id,es,fr,ru,vi,it,pt,de,ko,tr,da,he #failed
+      # LANGUAGES: zh-Hant,zh-Hans,en,ja,id,es,fr,ru,vi,it,pt,de,ko,tr,da,he,fa,ms,th,fil,ar # failed
       MODEL_PATH: /usr/local/models # (REQUIRE) Path to language models, default is /usr/local/models
       HOTFIXDATAFOLDER: ""  # (Optional) Specify path if using Hotfix feature, leave empty by default
       GENERATEHOTFIXTEMPLATE: "false"  # (Optional) Set to true if you need to generate Hotfix template and specify HOTFIXDATAFOLDER, default is false
@@ -26,16 +34,21 @@ services:
       Mounts:License: "" # (Optional) Specify path if using License feature, leave empty by default
       CATEGORIES: ""  # (Optional) Specify model categories if needed, leave empty by default
       MODSENVIRONMENT: ""  # (Optional) Specify MoDS endpoint if using MoDS service, leave empty by default
-      MODELS: "" # (Optional) Leave empty by default
-      TRANSLATORSYSTEMCONFIG: "" # (Optional) Leave empty by default
+      MODELS: "/usr/local/models/chs_cht_generalnn_2024040101"
+      # MODELS: "/usr/local/models/chs_cht_generalnn_2024040101,/usr/local/models/chs_enu_generalnn_2023110100,/usr/local/models/cht_chs_generalnn_2024040101,/usr/local/models/dan_enu_generalnn_2023040200,/usr/local/models/deu_enu_generalnn_2023090100,/usr/local/models/enu_chs_generalnn_2023110100,/usr/local/models/enu_chs_generalnn_contextual_translit_2024012300,/usr/local/models/enu_cht_generalnn_contextual_translit_2024012300,/usr/local/models/enu_dan_generalnn_2023040200,/usr/local/models/enu_deu_generalnn_2023090100,/usr/local/models/enu_esn_generalnn_2023090100,/usr/local/models/enu_far_generalnn_2023040200,/usr/local/models/enu_far_generalnn_translit_2024012300,/usr/local/models/enu_fra_generalnn_2023110100,/usr/local/models/enu_heb_generalnn_2023040200,/usr/local/models/enu_heb_generalnn_translit_2024012300,/usr/local/models/enu_ind_generalnn_2023040200,/usr/local/models/enu_ita_generalnn_2023110100,/usr/local/models/enu_jpn_generalnn_2023110100,/usr/local/models/enu_jpn_generalnn_contextual_translit_2024012300,/usr/local/models/enu_kor_generalnn_2023110100,/usr/local/models/enu_kor_generalnn_contextual_translit_2024012300,/usr/local/models/enu_msl_generalnn_2025080401,/usr/local/models/enu_ptb_generalnn_2023040200,/usr/local/models/enu_rus_generalnn_2023090100,/usr/local/models/enu_rus_generalnn_contextual_translit_2024012300,/usr/local/models/enu_tha_generalnn_2025080401,/usr/local/models/enu_trk_generalnn_2023090100,/usr/local/models/enu_vit_generalnn_2023040200,/usr/local/models/esn_enu_generalnn_2023110100,/usr/local/models/far_enu_generalnn_2023040200,/usr/local/models/far_enu_generalnn_translit_2024012300,/usr/local/models/fra_enu_generalnn_2023090100,/usr/local/models/heb_enu_generalnn_2023040200,/usr/local/models/heb_enu_generalnn_translit_2024012300,/usr/local/models/ind_enu_generalnn_2023040200,/usr/local/models/ita_enu_generalnn_2023110100,/usr/local/models/jpn_enu_generalnn_2023110100,/usr/local/models/jpn_enu_generalnn_translit_2024012300,/usr/local/models/kor_enu_generalnn_2023110100,/usr/local/models/kor_enu_generalnn_translit_2024012300,/usr/local/models/msl_enu_generalnn_2025080401,/usr/local/models/ptb_enu_generalnn_2023090100,/usr/local/models/rus_enu_generalnn_2023090100,/usr/local/models/rus_enu_generalnn_translit_2024012300,/usr/local/models/tha_enu_generalnn_2023040200,/usr/local/models/tha_enu_generalnn_translit_2024012300,/usr/local/models/trk_enu_generalnn_2023090100,/usr/local/models/vit_enu_generalnn_2023040200,/usr/local/models/zh-hans_enu_generalnn_translit_2024012300,/usr/local/models/zh-hant_enu_generalnn_translit_2024012300,"
+      TRANSLATORSYSTEMCONFIG: /app/translator_system_config_short
       # .Net Core settings
       Mounts:Output: /logs # (Optional) But there is no log in the container
       # Other settings
       ladurl: http://azure-ai-language:5000
       VISIONURL: http://azure-ai-read:5000
+      MODELS_UPDATED: "false"
     volumes:
       - ./azure-ai-translator/models:/usr/local/models
       - ./azure-ai-translator/logs:/logs
+      - ./azure-ai-translator/output:/output
+      - ./azure-ai-translator/start_service.sh:/app/start_service.sh
+      - ./azure-ai-translator/translator_system_config:/app/translator_system_config
     expose:
       - "5000"
     ports:
@@ -43,55 +56,55 @@ services:
     networks:
       - adi-network
 
-  # Azure AI Language
-  azure-ai-language:
-    container_name: azure-ai-language
-    image: mcr.microsoft.com/azure-cognitive-services/textanalytics/language:latest
-    restart: always
-    deploy:
-      resources:
-        limits:
-          cpus: 8
-          memory: 24G
-    environment:
-      EULA: accept
-      APIKEY: ${LANGUAGE_RESOURCE_KEY}
-      BILLING: ${LANGUAGE_RESOURCE_ENDPOINT_URI}
-    volumes:
-      - ./azure-ai-language/output:/output
-    expose:
-      - "5000"
-    ports:
-      - "5001:5000"
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5000/status"]
-      interval: 60s
-      timeout: 20s
-      retries: 5
-      start_period: 120s
-    networks:
-      - adi-network
+  # # Azure AI Language
+  # azure-ai-language:
+  #   container_name: azure-ai-language
+  #   image: mcr.microsoft.com/azure-cognitive-services/textanalytics/language:latest
+  #   restart: always
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         cpus: 8
+  #         memory: 24G
+  #   environment:
+  #     EULA: accept
+  #     APIKEY: ${LANGUAGE_RESOURCE_KEY}
+  #     BILLING: ${LANGUAGE_RESOURCE_ENDPOINT_URI}
+  #   volumes:
+  #     - ./azure-ai-language/output:/output
+  #   expose:
+  #     - "5000"
+  #   ports:
+  #     - "5001:5000"
+  #   healthcheck:
+  #     test: ["CMD", "curl", "-f", "http://localhost:5000/status"]
+  #     interval: 60s
+  #     timeout: 20s
+  #     retries: 5
+  #     start_period: 120s
+  #   networks:
+  #     - adi-network
 
-  # Azure AI Vision Read
-  azure-ai-read:
-    container_name: azure-ai-read
-    image: mcr.microsoft.com/azure-cognitive-services/vision/read:latest
-    restart: always
-    deploy:
-      resources:
-        limits:
-          cpus: 8
-          memory: 24G
-    environment:
-      EULA: accept
-      APIKEY: ${COMPUTER_VISION_KEY}
-      BILLING: ${COMPUTER_VISION_ENDPOINT_URI}
-    volumes:
-      - ./azure-ai-read/share:/share
-    expose:
-      - "5000"
-    ports:
-      - "5002:5000"
-    networks:
-      - adi-network
+  # # Azure AI Vision Read
+  # azure-ai-read:
+  #   container_name: azure-ai-read
+  #   image: mcr.microsoft.com/azure-cognitive-services/vision/read:latest
+  #   restart: always
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         cpus: 8
+  #         memory: 24G
+  #   environment:
+  #     EULA: accept
+  #     APIKEY: ${COMPUTER_VISION_KEY}
+  #     BILLING: ${COMPUTER_VISION_ENDPOINT_URI}
+  #   volumes:
+  #     - ./azure-ai-read/share:/share
+  #   expose:
+  #     - "5000"
+  #   ports:
+  #     - "5002:5000"
+  #   networks:
+  #     - adi-network
 
