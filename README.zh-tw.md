@@ -73,6 +73,38 @@ uid=65532(nonroot) gid=65532(nonroot) groups=65532(nonroot)
 
 TRANSLATORSYSTEMCONFIG 的多寡, 並不會影響 Microsoft.CloudAI.Containers.Translator 讀取的多寡
 
+### TRANSLATORSYSTEMCONFIG 有沒有範例?
+
+```json
+[
+  {
+    "sourceLanguage": "zh-CHT",
+    "targetLanguage": "zh-CHS",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "zh-TW",
+      "targetLanguage": "zh-CN",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  },
+  {
+    "sourceLanguage": "zh-CHS",
+    "targetLanguage": "en",
+    "category": "generalnn",
+    "destination": {
+      "serviceUrl": "localproc://",
+      "sourceLanguage": "zh-CN",
+      "targetLanguage": "en-US",
+      "leafDomain": "generalnn",
+      "type": "InProcess"
+    }
+  }
+]
+```
+
+
 ### 決定 Microsoft.CloudAI.Containers.Translator 會匯入多大多小的參數是哪一個?
 
   `MODELS` 放的路徑越多, 所需要的記憶體會越大, 且這程式有讀取上限
